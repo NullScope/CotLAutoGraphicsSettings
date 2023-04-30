@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using Lamb.UI;
+using Lamb.UI.MainMenu;
 
 namespace CotLAutoGraphicsSettings.Patches
 {
@@ -11,6 +12,13 @@ namespace CotLAutoGraphicsSettings.Patches
         public static void UIManager_Start()
         {
             Plugin.SetupConfig();
+            Plugin.ApplySettings();
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UIMainMenuController), nameof(UIMainMenuController.Start))]
+        public static void LoadMainMenu_Start()
+        {
             Plugin.ApplySettings();
         }
 
@@ -40,7 +48,6 @@ namespace CotLAutoGraphicsSettings.Patches
         [HarmonyPatch(typeof(LocationManager), nameof(LocationManager.EndLoadLocation))]
         public static void LocationManager_EndLoadLocation(FollowerLocation location)
         {
-            Plugin.Log.LogError(location);
             switch(location)
 			{
                 // These are all called during loading of the Cult Base,
