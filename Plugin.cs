@@ -49,11 +49,13 @@ namespace CotLAutoGraphicsSettings
 
         public static SettingsData.GraphicsSettings CloneSettings (SettingsData.GraphicsSettings settings)
 		{
-            var newSettings = new SettingsData.GraphicsSettings(settings);
-            // For some reason the constructor does not copy over the AntiAliasing option, so we set it here.
-            newSettings.AntiAliasing = settings.AntiAliasing;
+			var newSettings = new SettingsData.GraphicsSettings(settings)
+			{
+				// For some reason the constructor does not copy over the AntiAliasing option, so we set it here.
+				AntiAliasing = settings.AntiAliasing
+			};
 
-            return newSettings;
+			return newSettings;
         }
 
         public static void SetupConfig()
