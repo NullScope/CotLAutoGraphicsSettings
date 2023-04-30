@@ -1,11 +1,11 @@
-# CotLAutoGraphicsSettings
+# Auto Graphics Settings Switcher Mod
 
-Cult of the Lamb Auto Graphics Settings Mod is a mod that allows you to set different graphics settings for your Cult Base and for the rest of the game. When moving between between places (e.g between your Cult Base and going into a Crusade or vice-versa), this mod will automatically set the predefined graphics settings for that place.
+Cult of the Lamb Auto Graphics Settings Switcher Mod is a mod that allows you to set different graphics settings for your Cult Base and for the rest of the game. When moving between between places (e.g between your Cult Base and going into a Crusade or vice-versa), this mod will automatically set the predefined graphics settings for that place.
 
 ## Why?
 
 The Cult Base can become very resource heavy as you progress in the game. As such, low power or portable devices (such as the Steam Deck) will begin to slow down and heat up. While I played on my Steam Deck I was constantly swapping to the low preset at 30 fps while in the base to prevent the Steam Deck fan from going full blast and to preserve battery life.
-This mod was born to do this automatically for me and anyone interested in doing the same.
+This mod was born with the objective of doing this automatically so that during Crusades you can have the highest settings at 60 fps and inside the Cult you can have a whisper quiet experience and longer battery life.
 
 # Requirements
 
