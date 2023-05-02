@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>CotLTemplateMod</AssemblyName>
+        <AssemblyName>CotLAutoGraphicsSettings</AssemblyName>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <ReleaseVersion>1.0.0</ReleaseVersion>
         <TargetFramework>netstandard2.0</TargetFramework>
@@ -12,6 +12,11 @@
         <OutputPath Condition=" '$(SolutionDir)' != '' ">$(SolutionDir)bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
         <OutputPath Condition=" '$(SolutionDir)' == '' ">$(ProjectDir)bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <RootNamespace>CotLAutoGraphicsSettings</RootNamespace>
+    </PropertyGroup>
+    <PropertyGroup>
+        <!-- Disable "Forced Access" warning -->
+        <NoWarn>Publicizer001</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,13 +30,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="CultOfTheLamb.GameLibs" Version="1.0.12-*" />
+        <PackageReference Include="CultOfTheLamb.GameLibs" Version="*-*" />
     </ItemGroup>
-
+	
     <ItemGroup>
-      <Reference Include="COTL_API" Private="false">
-        <HintPath>lib\COTL_API.dll</HintPath>
-      </Reference>
+        <Folder Include="Assets\" />
+        <Folder Include="FollowerCommands\" />
+        <Folder Include="Items\" />
     </ItemGroup>
 
 </Project>
